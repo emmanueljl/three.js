@@ -91,6 +91,7 @@
 				try {
 
 					const texture = await loader.loadAsync( './textures/compressed/mipmaps_sample.ktx2' );
+					texture.minFilter = THREE.NearestMipmapNearestFilter;
 
 					console.info( `transcoded to ${formatStrings[ texture.format ]}` );
 
